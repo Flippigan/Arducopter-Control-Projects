@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Circle Detector Node - DDS Version
+Circle Detector Node - DDS Versions
 
 This version uses ArduPilot's built-in DDS interface instead of MAVROS/MAVLINK.
 Key DDS interfaces used:
