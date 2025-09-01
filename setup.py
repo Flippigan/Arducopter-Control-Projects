@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'circle_detector'
+package_name = 'formation_control'
 
 setup(
     name=package_name,
@@ -15,12 +15,16 @@ setup(
     zip_safe=True,
     maintainer='finn',
     maintainer_email='finnpicotoli@gmail.com',
-    description='Circle detection node for drone payload delivery',
+    description='Multi-drone 3D formation control system with centralized safety monitoring',
     license='Apache-2.0',
-    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'circle_detector = circle_detector.circle_detector:main',
+            'formation_commander = formation_control.formation_commander:main',
+            'safety_monitor = formation_control.safety_monitor:main',
+            'emergency_controller = formation_control.emergency_controller:main',
+            'drone_interface = formation_control.drone_interface:main',
+            'formation_visualizer = formation_control.formation_visualizer:main',
+            'swarm_takeoff_commander = formation_control.swarm_takeoff_commander:main',
         ],
     },
 )
